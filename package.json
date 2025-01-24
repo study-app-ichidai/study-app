@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "info": "next info"
+    "format": "bunx biome format --write ./src/**/*"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
@@ -21,6 +21,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
