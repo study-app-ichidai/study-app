@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json ./
 
 # 依存関係のインストール（キャッシュを利用せず最新にするため）
-RUN bun install --no-cache
+RUN bun install --frozen-lockfile
 
 # ソースコードをコピー（必要なファイルだけコピー）
 COPY . .

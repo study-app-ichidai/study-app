@@ -1,0 +1,12 @@
+{
+    "name": "study-app",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "study-app",
+    "workspaceFolder": "/app",
+    "extensions": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint"
+    ],
+    "remoteUser": "root"
+  }
+  
