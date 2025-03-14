@@ -7,15 +7,26 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": []
+    "include":["**/*.ts","**/*.tsx","**/*.js"],
+    "ignore": [
+      "**/dist",
+      "**/.next",
+      "**/.turbo",
+      "**/.vscode",
+      "**/node_modules"
+    ]
   },
   "formatter": {
     "enabled": true,
+    "useEditorconfig": true,
     "formatWithErrors": false,
-    "ignore": [],
     "indentStyle": "space",
     "indentWidth": 2,
-    "lineWidth": 100
+    "lineEnding": "lf",
+    "lineWidth": 80,
+    "attributePosition": "auto",
+    "bracketSpacing": true,
+    "ignore": ["**/dist"]
   },
   "organizeImports": {
     "enabled": true
@@ -24,23 +35,32 @@
     "enabled": true,
     "rules": {
       "recommended": true,
-      "suspicious": {
-        "noExplicitAny": "off"
+      "a11y": {
+        "useKeyWithClickEvents": "off"
+      },
+      "complexity": {
+        "noUselessFragments": "warn"
+      },
+      "correctness": {
+        "useHookAtTopLevel": "off",
+        "noUnusedVariables": "warn"
+      },
+      "style": {
+        "useSelfClosingElements": "warn"
       }
     }
   },
   "javascript": {
     "formatter": {
-      "enabled": true,
-      "quoteStyle": "single",
       "jsxQuoteStyle": "double",
-      "trailingCommas": "all",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "none",
       "semicolons": "asNeeded",
       "arrowParentheses": "always",
-      "indentStyle": "space",
-      "indentWidth": 2,
-      "lineWidth": 100,
-      "quoteProperties": "asNeeded"
+      "bracketSameLine": false,
+      "quoteStyle": "double",
+      "attributePosition": "auto",
+      "bracketSpacing": true
     }
   }
 }
